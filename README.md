@@ -1,24 +1,11 @@
-# README
+# Product and Inventory API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
+`rake db:create db:migrate db:seed`
 
-Things you may want to cover:
+`rails s`
 
-* Ruby version
+You can view the UI by going to this server and running a separate server on localhost:3001
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Testing
+Tests can be run with `bundle exec rspec`

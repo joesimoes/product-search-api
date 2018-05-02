@@ -1,6 +1,4 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :update, :destroy]
-
   def search
     products = Product.search(params[:name])
     products_with_inventory = []
