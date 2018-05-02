@@ -1,0 +1,31 @@
+<%= render 'nav' %>
+<%= render 'search' %>
+
+<% @products.each do |product| %>
+  <div class="item">
+    <%= image_tag "#{product['image']}", class: "img-rounded" %>
+    <strong><%= product['name']%></strong>
+    <br>
+    <%= product['description'] %>
+    <br>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Waist</th>
+        <th>Length</th>
+        <th>Style</th>
+        <th>Count</th>
+      </tr>
+    </thead>
+    <% product['inventory'].each do |item| %>
+      <tr>
+        <td><%= item['waist'] %></td>
+        <td><%= item['length'] %></td>
+        <td><%= item['style'] %></td>
+        <td><%= item['count' ]%></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
